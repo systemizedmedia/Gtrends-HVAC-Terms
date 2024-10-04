@@ -3,29 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Trends Embed</title>
+    <title>Google Search Trends: HVAC Terms (Past 30 Days)</title>
     <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3826_RC01/embed_loader.js"></script>
 </head>
 <body>
-    <h1>Google Trends Comparison</h1>
-    <div id="trends-widget"></div>
+    <!-- Logo Section -->
+    <div style="text-align: center; margin-top: 20px;">
+        <img src="SystemizedMedia Black Logo.png" alt="Systemized Media Logo" style="width: 200px;">
+    </div>
+    
+    <!-- Page Title -->
+    <h1 style="text-align: center;">Google Search Trends: HVAC Terms (Past 30 Days)</h1>
+    
+    <!-- Google Trends Widget -->
+    <div id="trends-widget" style="margin-top: 40px;"></div>
+    
     <script type="text/javascript">
         trends.embed.renderExploreWidget(
             "GEO_MAP",
             {
                 "comparisonItem": [
-                    {"keyword":"heat pump","geo":"US","time":"now 1-d"},
-                    {"keyword":"furnace","geo":"US","time":"now 1-d"},
-                    {"keyword":"air conditioner","geo":"US","time":"now 1-d"},
-                    {"keyword":"hvac","geo":"US","time":"now 1-d"},
-                    {"keyword":"mini split","geo":"US","time":"now 1-d"}
+                    {"keyword":"Air Conditioner","geo":"US","time":"today 1-m"},
+                    {"keyword":"Furnace","geo":"US","time":"today 1-m"},
+                    {"keyword":"HVAC System","geo":"US","time":"today 1-m"},
+                    {"keyword":"Mini Split","geo":"US","time":"today 1-m"},
+                    {"keyword":"Heat Pump","geo":"US","time":"today 1-m"}
                 ],
-                "category":0,
-                "property":""
+                "category": 0,
+                "property": ""
             },
             {
-                "exploreQuery":"date=now%201-d&geo=US&q=heat%20pump,furnace,air%20conditioner,hvac,mini%20split&hl=en",
-                "guestPath":"https://trends.google.com:443/trends/embed/"
+                "exploreQuery": "date=today%201-m&geo=US&q=Air%20Conditioner,Furnace,HVAC%20System,Mini%20Split,Heat%20Pump&hl=en",
+                "guestPath": "https://trends.google.com:443/trends/embed/"
             }
         );
     </script>
