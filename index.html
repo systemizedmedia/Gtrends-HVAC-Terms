@@ -5,22 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Search Trends: HVAC Terms (Past 30 Days)</title>
     <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3826_RC01/embed_loader.js"></script>
+    <style>
+        /* Responsive design for widget and page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px;
+        }
+        .logo-container {
+            text-align: center;
+            margin: 20px;
+        }
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        #trends-widget {
+            width: 100%;
+            max-width: 1000px; /* Set a max width for large screens */
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
     <!-- Logo Section -->
-    <div style="text-align: center; margin-top: 20px;">
-        <img src="SystemizedMedia Black Logo.png" alt="Systemized Media Logo" style="width: 200px;">
+    <div class="logo-container">
+        <img src="SystemizedMedia Black Logo.png" alt="Systemized Media Logo">
     </div>
     
     <!-- Page Title -->
-    <h1 style="text-align: center;">Google Search Trends: HVAC Terms (Past 30 Days)</h1>
+    <h1>Google Search Trends: HVAC Terms (Past 30 Days)</h1>
     
     <!-- Google Trends Widget -->
-    <div id="trends-widget" style="margin-top: 40px;"></div>
+    <div id="trends-widget"></div>
     
     <script type="text/javascript">
         trends.embed.renderExploreWidget(
-            "GEO_MAP",
+            "TIMESERIES",
             {
                 "comparisonItem": [
                     {"keyword":"Air Conditioner","geo":"US","time":"today 1-m"},
