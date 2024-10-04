@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Trends Embed</title>
+    <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3826_RC01/embed_loader.js"></script>
+</head>
+<body>
+    <h1>Google Trends Comparison</h1>
+    <div id="trends-widget"></div>
+    <script type="text/javascript">
+        trends.embed.renderExploreWidget(
+            "GEO_MAP",
+            {
+                "comparisonItem": [
+                    {"keyword":"heat pump","geo":"US","time":"now 1-d"},
+                    {"keyword":"furnace","geo":"US","time":"now 1-d"},
+                    {"keyword":"air conditioner","geo":"US","time":"now 1-d"},
+                    {"keyword":"hvac","geo":"US","time":"now 1-d"},
+                    {"keyword":"mini split","geo":"US","time":"now 1-d"}
+                ],
+                "category":0,
+                "property":""
+            },
+            {
+                "exploreQuery":"date=now%201-d&geo=US&q=heat%20pump,furnace,air%20conditioner,hvac,mini%20split&hl=en",
+                "guestPath":"https://trends.google.com:443/trends/embed/"
+            }
+        );
+    </script>
+</body>
+</html>
