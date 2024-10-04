@@ -6,44 +6,66 @@
     <title>Google Search Trends: HVAC Terms (Past 30 Days)</title>
     <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3826_RC01/embed_loader.js"></script>
     <style>
-        /* Responsive design for widget and page */
+        /* Basic styling for body and text */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
+
+        /* Title styling */
         h1 {
             text-align: center;
             padding: 20px;
+            font-size: 1.5rem;
         }
+
+        /* Logo container: Keep centered and limit size */
         .logo-container {
             text-align: center;
-            margin: 20px;
+            margin: 20px 0;
         }
+        
+        /* Responsive logo size */
         .logo-container img {
-            max-width: 100%;
+            max-width: 200px; /* Limit the logo width */
             height: auto;
         }
+
+        /* Widget container */
         #trends-widget {
             width: 100%;
-            max-width: 1000px; /* Set a max width for large screens */
-            margin: 0 auto;
+            max-width: 1000px; /* Restrict max width for larger screens */
+            height: 500px; /* Minimum height for the widget */
+            margin: 0 auto; /* Center the widget */
             padding: 20px;
+        }
+
+        /* Ensure responsiveness on mobile */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.2rem; /* Smaller font size for mobile */
+            }
+
+            #trends-widget {
+                height: 400px; /* Adjust height for smaller screens */
+            }
         }
     </style>
 </head>
 <body>
+
     <!-- Logo Section -->
     <div class="logo-container">
         <img src="SystemizedMedia Black Logo.png" alt="Systemized Media Logo">
     </div>
-    
+
     <!-- Page Title -->
     <h1>Google Search Trends: HVAC Terms (Past 30 Days)</h1>
-    
+
     <!-- Google Trends Widget -->
     <div id="trends-widget"></div>
-    
+
     <script type="text/javascript">
         trends.embed.renderExploreWidget(
             "TIMESERIES",
@@ -64,5 +86,6 @@
             }
         );
     </script>
+
 </body>
 </html>
