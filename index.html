@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Search Trends: HVAC Terms (Past 30 Days)</title>
+    <title>Google Search Trends: HVAC Terms (Widget 1)</title>
     <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3826_RC01/embed_loader.js"></script>
     <style>
-        /* Ensure both widgets have enough space */
         .trends-widget {
             width: 100%;
-            height: 600px; /* Increased height to accommodate widget content */
+            height: 600px; /* Set appropriate height for the widget */
         }
 
-        /* Add more margin between the widgets */
-        .spacer {
-            margin-top: 150px; /* Larger space between widgets */
+        .nav-link {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .nav-link a {
+            font-size: 20px;
+            text-decoration: none;
+            color: blue;
         }
     </style>
 </head>
@@ -25,16 +30,15 @@
     </div>
     
     <!-- Page Title -->
-    <h1 style="text-align: center;">Google Search Trends: HVAC Terms (Past 30 Days)</h1>
+    <h1 style="text-align: center;">Google Search Trends: HVAC Terms (Widget 1)</h1>
     
     <!-- Google Trends Widget for Original Terms -->
     <div id="trends-widget-1" class="trends-widget"></div>
     
-    <!-- Spacer to add more space between the two widgets -->
-    <div class="spacer"></div>
-    
-    <!-- Google Trends Widget for New Terms -->
-    <div id="trends-widget-2" class="trends-widget"></div>
+    <!-- Link to Second Widget Page -->
+    <div class="nav-link">
+        <a href="widget2.html">Go to Widget 2</a>
+    </div>
     
     <!-- First Google Trends Widget Script -->
     <script type="text/javascript">
@@ -53,28 +57,6 @@
             },
             {
                 "exploreQuery": "date=today%201-m&geo=US&q=Air%20Conditioner,Furnace,HVAC%20System,Mini%20Split,Heat%20Pump&hl=en",
-                "guestPath": "https://trends.google.com:443/trends/embed/"
-            }
-        );
-    </script>
-
-    <!-- Second Google Trends Widget Script -->
-    <script type="text/javascript">
-        trends.embed.renderExploreWidget(
-            "GEO_MAP",
-            {
-                "comparisonItem": [
-                    {"keyword":"HVAC Tune Up","geo":"US","time":"today 1-m"},
-                    {"keyword":"AC Tune Up","geo":"US","time":"today 1-m"},
-                    {"keyword":"Furnace Tune up","geo":"US","time":"today 1-m"},
-                    {"keyword":"HVAC Repair","geo":"US","time":"today 1-m"},
-                    {"keyword":"HVAC Inspection","geo":"US","time":"today 1-m"}
-                ],
-                "category": 0,
-                "property": ""
-            },
-            {
-                "exploreQuery": "date=today%201-m&geo=US&q=HVAC%20Tune%20Up,AC%20Tune%20Up,Furnace%20Tune%20up,HVAC%20Repair,HVAC%20Inspection&hl=en",
                 "guestPath": "https://trends.google.com:443/trends/embed/"
             }
         );
