@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Search Trends: HVAC Terms (Past 30 Days)</title>
     <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3826_RC01/embed_loader.js"></script>
+    <style>
+        /* Container for flexbox layout */
+        .trends-container {
+            display: flex;
+            justify-content: center; /* Center both widgets horizontally */
+            gap: 20px; /* Space between the two widgets */
+            margin-top: 40px;
+        }
+
+        /* Styling for each widget */
+        .trends-widget {
+            width: 45%; /* Each widget takes up about half the screen */
+            height: 500px; /* Set a fixed height for both widgets */
+        }
+    </style>
 </head>
 <body>
     <!-- Logo Section -->
@@ -15,9 +30,16 @@
     <!-- Page Title -->
     <h1 style="text-align: center;">Google Search Trends: HVAC Terms (Past 30 Days)</h1>
     
-    <!-- Google Trends Widget for Original Terms -->
-    <div id="trends-widget-1" style="margin-top: 40px; padding-bottom: 100px;"></div>
+    <!-- Container for the two Google Trends widgets -->
+    <div class="trends-container">
+        <!-- Google Trends Widget for Original Terms -->
+        <div id="trends-widget-1" class="trends-widget"></div>
+        
+        <!-- Google Trends Widget for New Terms -->
+        <div id="trends-widget-2" class="trends-widget"></div>
+    </div>
     
+    <!-- First Google Trends Widget Script -->
     <script type="text/javascript">
         trends.embed.renderExploreWidget(
             "GEO_MAP",
@@ -38,10 +60,8 @@
             }
         );
     </script>
-    
-    <!-- Google Trends Widget for New Terms (without title) -->
-    <div id="trends-widget-2" style="margin-top: 80px;"></div>
-    
+
+    <!-- Second Google Trends Widget Script -->
     <script type="text/javascript">
         trends.embed.renderExploreWidget(
             "GEO_MAP",
