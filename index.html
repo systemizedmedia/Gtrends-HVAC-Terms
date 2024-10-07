@@ -15,8 +15,8 @@
     <!-- Page Title -->
     <h1 style="text-align: center;">Google Search Trends: HVAC Terms (Past 30 Days)</h1>
     
-    <!-- Google Trends Widget -->
-    <div id="trends-widget" style="margin-top: 40px;"></div>
+    <!-- Google Trends Widget for Original Terms -->
+    <div id="trends-widget-1" style="margin-top: 40px;"></div>
     
     <script type="text/javascript">
         trends.embed.renderExploreWidget(
@@ -34,6 +34,33 @@
             },
             {
                 "exploreQuery": "date=today%201-m&geo=US&q=Air%20Conditioner,Furnace,HVAC%20System,Mini%20Split,Heat%20Pump&hl=en",
+                "guestPath": "https://trends.google.com:443/trends/embed/"
+            }
+        );
+    </script>
+    
+    <!-- New Widget for Additional Terms -->
+    <h2 style="text-align: center; margin-top: 40px;">Google Search Trends: HVAC Services (Past 30 Days)</h2>
+    
+    <!-- Google Trends Widget for New Terms -->
+    <div id="trends-widget-2" style="margin-top: 40px;"></div>
+    
+    <script type="text/javascript">
+        trends.embed.renderExploreWidget(
+            "GEO_MAP",
+            {
+                "comparisonItem": [
+                    {"keyword":"HVAC Tune Up","geo":"US","time":"today 1-m"},
+                    {"keyword":"AC Tune Up","geo":"US","time":"today 1-m"},
+                    {"keyword":"Furnace Tune up","geo":"US","time":"today 1-m"},
+                    {"keyword":"HVAC Repair","geo":"US","time":"today 1-m"},
+                    {"keyword":"HVAC Inspection","geo":"US","time":"today 1-m"}
+                ],
+                "category": 0,
+                "property": ""
+            },
+            {
+                "exploreQuery": "date=today%201-m&geo=US&q=HVAC%20Tune%20Up,AC%20Tune%20Up,Furnace%20Tune%20up,HVAC%20Repair,HVAC%20Inspection&hl=en",
                 "guestPath": "https://trends.google.com:443/trends/embed/"
             }
         );
